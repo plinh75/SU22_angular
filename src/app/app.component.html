@@ -1,12 +1,19 @@
 <div class="container">
   <button class="btn btn-primary">danh sách</button>
-  <h1 (click)="clickh1()">click</h1>
+  <h4 (click)="clickh1()">click{{schoolName}}</h4>
   <div>
-    <app-table [users] = "teachers"></app-table>
+    <form action="">
+      <input type="text" (keydown)="changeInput($event)" [value]="inputValue"> 
+      {{inputValue}}
+    </form>
+  </div>
+  <div>
+    <button class="btn btn-info" (click)="changeTableStatus()">{{showStatus? 'ẩn' : 'hiện'}} table</button>
+    <app-table [users]="teachers"*ngIf="showStatus"></app-table>
   </div>
 
   <div>
-    tên sv: <app-name [name] ="studentName"></app-name>
+    tên sv: <app-name [name]="studentName"></app-name>
     msv: <app-identity [id]="studentId"></app-identity>
   </div>
 

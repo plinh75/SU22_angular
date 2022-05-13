@@ -43,4 +43,14 @@ export class AppComponent {
     console.log('đã click');
     this.schoolName = 'poly'
   }
+  showStatus = true
+  changeTableStatus(){
+    this.showStatus = !this.showStatus
+  }
+
+  inputValue = ''
+  changeInput(event: any){
+    this.inputValue= event.target.value;
+    
+  }
 }
