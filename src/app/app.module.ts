@@ -11,6 +11,9 @@ import { NameComponent } from './name/name.component';
 import { IdentityComponent } from './identity/identity.component';
 import { TableStatusComponent } from './table/table-status/table-status.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
     NameComponent,
     IdentityComponent,
     TableStatusComponent,
-    TableAvatarComponent
+    TableAvatarComponent,
+    FormComponent,
+    ShowValidateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

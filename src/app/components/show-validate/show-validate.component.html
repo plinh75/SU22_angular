@@ -1,0 +1,17 @@
+<!-- validate tên -->
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['required']" class="text-danger">{{key}} đc để
+    trống</span>
+<span *ngIf="field.errors?.['minlength']" class="text-danger">{{key}} phải đủ 6 kí tự</span>
+
+<!-- validate tuổi -->
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['min']" class="text-danger">
+    {{key}} tuổi tối thiểu là {{field.errors?.['min'].min}}
+</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">
+    {{key}} tuổi tối đa là {{field.errors?.['max'].max}}
+</span>
+
+<!-- validate email -->
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['email']" class="text-danger">
+    {{key}} phải đúng định dạng
+</span>
