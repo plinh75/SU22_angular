@@ -1,4 +1,4 @@
-<!-- <p>{{userForm.valid | json}}</p> -->
+<p>{{inputValues | json}}</p>
 
 <form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <div class="form-group">
@@ -43,8 +43,8 @@
                 <td>{{user.age}}</td>
                 <td>{{user.email}}</td>
                 <td>
-                    <button class="btn btn-dark">sửa</button>
-                    <button class="btn btn-secondary">sửa</button>
+                    <button class="btn btn-dark" (click)="onEdit(user.id)">sửa</button>
+                    <button class="btn btn-secondary" (click)="onDelete(user.id)">xóa</button>
                 </td>
             </tr>
         </tbody>
