@@ -1,62 +1,14 @@
 <div class="container">
   <div>
-    <!-- <h2>angular form</h2> -->
-    <div>
-      <app-user>
-        
-      </app-user>
-      <!-- <app-form></app-form> -->
-    </div>
+    <h1>Router</h1>
+    <nav>
+      <ul>
+        <!-- sd routerLink thay vì href -->
+        <li><a routerLink="/">home</a></li> 
+        <li><a routerLink="/user">user</a></li>
+      </ul>
+    </nav>
+    <!-- đây là nơi component ở routes đc render -->
+    <router-outlet></router-outlet>
   </div>
-  <hr>
-
-  <button class="btn btn-primary">danh sách</button>
-  <!-- <h4 (click)="clickh1()">click{{schoolName}}</h4> -->
-
-  <div>
-    <form action="">
-      <input type="text" (keydown)="changeInput($event)" [value]="inputValue"> 
-      {{inputValue}}
-    </form>
-  </div>
-
-  <div>
-    <p>Form đki ttin</p>
-    <form action="">
-      <div class="form-group">
-        <label for="">tên gv</label>
-        <input type="text" class="form-control" (input) = "onInput($event, 'name')" [value]="inputForm.name">
-      </div>
-      <div class="form-group">
-        <label for="">tuổi gv</label>
-        <input type="number" class="form-control" (input) = "onInput($event, 'age')" [value]="inputForm.age">
-      </div>
-      <div class="form-group">
-        <label for="">giới tính</label>
-        <input type="radio" class="form-check" (input) = "onInput($event, 'gender')" [value]="1" [checked]="inputForm.gender === '1' "> Nam
-        <input type="radio" class="form-check" (input) = "onInput($event, 'gender')" [value]="0" [checked]="inputForm.gender === '0' "> Nữ
-      </div>
-      <div class="form-group">
-        <label for="">avatar</label>
-        <input type="text" class="form-control" (input) = "onInput($event, 'avatar')" [value]="inputForm.avatar">
-      </div>
-      <div class="form-group">
-        <label for="">trạng thái</label>
-        <input type="radio" class="form-check" (input) = "onInput($event, 'status')" [value]="1" [checked]="inputForm.status === '1' "> đang làm việc
-        <input type="radio" class="form-check" (input) = "onInput($event, 'status')" [value]="0" [checked]="inputForm.status === '0' "> đã nghỉ
-      </div>
-      <button type="button" (click) = "onSubmit()">thêm</button>
-    </form>
-  </div>
-
-  <div>
-    <button class="btn btn-info" (click)="changeTableStatus()">{{showStatus? 'ẩn' : 'hiện'}} table</button>
-    <app-table [users]="teachers"*ngIf="showStatus"></app-table>
-  </div>
-
-  <!-- <div>
-    tên sv: <app-name [name]="studentName"></app-name>
-    msv: <app-identity [id]="studentId"></app-identity>
-  </div> -->
-
 </div>
