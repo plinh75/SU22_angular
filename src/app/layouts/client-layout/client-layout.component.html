@@ -1,5 +1,13 @@
 <div class="container">
-    <header>header</header>
+    <header>
+        <nav>
+            <ul>
+                <!-- sd routerLink thay vì href -->
+                <li><a routerLink="/">home</a></li>
+                <li><a routerLink="/user">user</a></li>
+            </ul>
+        </nav>
+    </header>
     <div>
         <!-- đây là nơi những phần của component thuộc client đc render -->
         <router-outlet></router-outlet>
