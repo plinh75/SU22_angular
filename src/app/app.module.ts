@@ -12,6 +12,7 @@ import { IdentityComponent } from './identity/identity.component';
 import { TableStatusComponent } from './table/table-status/table-status.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
@@ -20,6 +21,10 @@ import { UserFormComponent } from './user/user-form/user-form.component';
 import { HomeComponent } from './home/home.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminPrdListComponent } from './pages/admin/admin-product/admin-prd-list/admin-prd-list.component';
+import { AdminPrdDetailComponent } from './pages/admin/admin-product/admin-prd-detail/admin-prd-detail.component';
+import { AdminPrdFormComponent } from './pages/admin/admin-product/admin-prd-form/admin-prd-form.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -38,13 +43,18 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     UserFormComponent,
     HomeComponent,
     ClientLayoutComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    AdminPrdListComponent,
+    AdminPrdDetailComponent,
+    AdminPrdFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

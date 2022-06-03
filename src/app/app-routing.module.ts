@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminPrdDetailComponent } from './pages/admin/admin-product/admin-prd-detail/admin-prd-detail.component';
+import { AdminPrdFormComponent } from './pages/admin/admin-product/admin-prd-form/admin-prd-form.component';
+import { AdminPrdListComponent } from './pages/admin/admin-product/admin-prd-list/admin-prd-list.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserComponent } from './user/user.component';
 
@@ -25,16 +28,38 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
+      // {
+      //   path: '',
+      //   redirectTo: 'users',
+      //   pathMatch: 'full'
+      // },
+      // {
+      //   path: 'users',
+      //   component: UserComponent
+      // }
       {
-        path: '',
-        redirectTo: 'users',
-        pathMatch: 'full'
-      },
-      {
-        path: 'users',
-        component: UserComponent
+        path: 'products',
+        children: [
+          {
+            path: '',
+            component: AdminPrdListComponent
+          },
+          {
+            path: 'create',
+            component: AdminPrdFormComponent
+          },
+          {
+            path: 'edit/:_id',
+            component: AdminPrdFormComponent
+          }, //đẩy admin/products/id xuống dưới cùng tránh nhầm id='create'
+          {
+            path:':_id',
+            component: AdminPrdDetailComponent
+          }, 
+        ]
       }
     ]
+    
   }
   // {
   //   path: 'user',
