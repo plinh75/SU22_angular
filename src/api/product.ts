@@ -20,3 +20,8 @@ export const remove = (_id: string) => {
     const url = `/product/${_id}`;
     return instance.delete(url)
 }
+
+export const update = (product: ProductType) => {
+    const url = `product/${product._id}`;
+    return instance.patch(url, product )
+}

@@ -8,6 +8,7 @@
         <tr>
             <th>ID</th>
             <th>NAME</th>
+            <th>STATUS</th>
             <th></th>
         </tr>
     </thead>
@@ -16,9 +17,13 @@
             <td>{{product._id}}</td>
             <td>{{product.name}}</td>
             <td>
+                <button *ngIf="product.status === 1" class="btn btn-success" (click)="onUpdateStatus(product._id,0)">ON</button>
+                <button *ngIf="product.status === 0" class="btn btn-secondary" (click)="onUpdateStatus(product._id,1)">OFF</button>
+            </td>
+            <td>
                 <button class="btn btn-dark"><a routerLink="/admin/products/{{product._id}}">Detail</a></button>
-                <button class="btn btn-secondary">sửa</button>
-                <button class="btn btn-danger" (click)="onDelete(product._id)">xóa</button>
+                <button class="btn btn-secondary"><a routerLink="/admin/products/edit/{{product._id}}">Edit</a></button>
+                <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button>
             </td>
         </tr>
     </tbody>

@@ -3,12 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 
-const apiUrl = 'http://localhost:3002/api'
+const apiUrl = 'http://localhost:8080/api'
 
 export const environment = {
   production: false,
 
-  products: `${apiUrl}/product`
+  products: `${apiUrl}/product`,
+  signin: `${apiUrl}/signin`
 };
 
 /*

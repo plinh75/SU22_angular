@@ -1,6 +1,6 @@
 <!-- validate tên -->
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['required']" class="text-danger">{{key}} k đc để
-    trống</span>
+    trống</span><br>
 <span *ngIf="field.errors?.['minlength']" class="text-danger">{{key}} phải đủ 6 kí tự</span>
 
 <!-- validate tuổi -->
@@ -15,3 +15,6 @@
 <span *ngIf="(field.dirty || field.touched) && field.errors?.['email']" class="text-danger">
     {{key}} phải đúng định dạng
 </span>
+
+<!-- custom validate -->
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']" class="text-danger">{{key}} phải chứa từ khóa 'product'</span>

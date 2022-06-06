@@ -24,6 +24,14 @@ export class AdminPrdListComponent implements OnInit {
     })
   }
 
+  onUpdateStatus(productId: string, newStatus: number){
+    this.productService.updateProduct(productId, {
+      status: newStatus
+    }).subscribe(data => {
+      this.onGetList()
+    })
+  }
+
   onDelete(_id: string | number) {
     //confirm
     const confirmDel = confirm('bạn có muốn xóa không?')

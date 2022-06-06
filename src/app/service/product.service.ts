@@ -15,14 +15,21 @@ export class ProductService {
   getProducts() : Observable<ProductType[]>{
     return this.http.get<ProductType[]>(environment.products)
   }
+
   getProduct(_id: string): Observable<ProductType>{
     return this.http.get<ProductType>(`${environment.products}/${_id}`)
   }
+
   deleteProduct (_id: string|number): Observable<any>{
     return this.http.delete(`${environment.products}/${_id}`)
   }
+  
   //dlieu gửi đi {name:string}, nhận về {name:string, id: string}
   createProduct(data: ProductCreate): Observable<ProductType>{
     return this.http.post<ProductType>(`${environment.products}`, data)
+  }
+
+  updateProduct(_id:string, data: ProductCreate): Observable<ProductType>{
+    return this.http.patch<ProductType>(`${environment.products}/${_id}`, data)
   }
 }
