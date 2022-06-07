@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="">Email</label>
         <input type="email" class="form-control" formControlName="email">
@@ -10,4 +10,43 @@
     <div class="form-group">
         <button class="btn btn-dark">Login</button>
     </div>
-</form>
+</form> -->
+<div class="form-bg">
+    <div class="container">
+        <div class="row">
+            <div class="pt-5">
+                <div class="form-container">
+                    <div class="left-content">
+                        <h4 class="sub-title">"Nature and books belong to the eyes that see them.".</h4>
+                    </div>
+                    <div class="right-content">
+                        <h3 class="form-title">Signin</h3>
+                        <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" formControlName="email"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" formControlName="password"/>
+                            </div>
+                            <button class="btn signin">Signin</button>
+                            <div class="remember-me">
+                                <input type="checkbox" class="checkbox" />
+                                <span class="check-label">Remember Me</span>
+                            </div>
+                            <a href="" class="forgot">Forgot Password</a>
+                        </form>
+                        <span class="separator">OR</span>
+                        <!-- <ul class="social-links">
+                            <li><a href=""><i class="fab fa-google" /> Signin with Google</a></li>
+                            <li><a href=""><i class="fab fa-facebook-f" /> Signin with Facebook</a></li>
+                        </ul> -->
+                        <span class="signup-link">Don't have an account? Sign up <a
+                                routerLink="/auth/signup">here</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -25,7 +25,9 @@ import { AdminPrdListComponent } from './pages/admin/admin-product/admin-prd-lis
 import { AdminPrdDetailComponent } from './pages/admin/admin-product/admin-prd-detail/admin-prd-detail.component';
 import { AdminPrdFormComponent } from './pages/admin/admin-product/admin-prd-form/admin-prd-form.component';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './pages/auth/login/login.component'
+import { LoginComponent } from './pages/auth/login/login.component';
+import { SignupComponent } from './pages/auth/signup/signup.component'
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { LoginComponent } from './pages/auth/login/login.component'
     AdminPrdListComponent,
     AdminPrdDetailComponent,
     AdminPrdFormComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
