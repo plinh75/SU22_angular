@@ -1,16 +1,105 @@
-<div class="container">
+<!-- <div class="container">
     <header>
         <nav>
             <ul>
                 <!-- sd routerLink thay vì href -->
-                <li><a routerLink="/">home</a></li>
+<!-- <li><a routerLink="/">home</a></li>
                 <li><a routerLink="/user">user</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-        <!-- đây là nơi những phần của component thuộc client đc render -->
-        <router-outlet></router-outlet>
+    <div> -->
+<!-- đây là nơi những phần của component thuộc client đc render -->
+<!-- <router-outlet></router-outlet>
     </div>
     <footer>footer</footer>
-</div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="/assets/client/main.css" />
+    <title></title>
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <app-header></app-header>
+        
+        <!-- category -->
+        
+        <!-- <div class="category container">
+            <div class="demo row" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-easing="linear">
+                <div class="demo-img col-6 col-md-3">
+                    <div class="img_scale">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="demo-item text-center mt-2">
+                        <h4><a href="">Love The Life</a></h4>
+                    </div>
+                </div>
+                <div class="demo-img col-6 col-md-3">
+                    <div class="img_scale">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="demo-item text-center mt-2">
+                        <h4><a href="">Santorini</a></h4>
+                    </div>
+                </div>
+                <div class="demo-img col-6 col-md-3">
+                    <div class="img_scale">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="demo-item text-center mt-2">
+                        <h4><a href="">Everyday Summer</a></h4>
+                    </div>
+                </div>
+                <div class="demo-img col-6 col-md-3">
+                    <div class="img_scale">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="demo-item text-center mt-2">
+                        <h4><a href="">Healthy Morning</a></h4>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+</body>
+
+</html>

@@ -9,7 +9,13 @@ export const environment = {
   production: false,
 
   products: `${apiUrl}/product`,
-  signin: `${apiUrl}/signin`
+
+  signin: `${apiUrl}/signin`,
+  signup: `${apiUrl}/signup`,
+
+  cates : `${apiUrl}/category`,
+
+  users: `${apiUrl}/user`
 };
 
 /*

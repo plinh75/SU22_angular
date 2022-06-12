@@ -15,4 +15,7 @@ export class AuthService {
   login(data: TypeLogInRequest) : Observable<TypeLogInResponse>{
     return this.http.post<TypeLogInResponse>(environment.signin, data)
   }
+  signup(data: TypeLogInRequest): Observable<TypeLogInResponse>{
+    return this.http.post<TypeLogInResponse>(environment.signup, data)
+  }
 }

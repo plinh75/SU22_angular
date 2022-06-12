@@ -26,7 +26,15 @@ import { AdminPrdDetailComponent } from './pages/admin/admin-product/admin-prd-d
 import { AdminPrdFormComponent } from './pages/admin/admin-product/admin-prd-form/admin-prd-form.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { SignupComponent } from './pages/auth/signup/signup.component'
+import { SignupComponent } from './pages/auth/signup/signup.component';
+import { CartComponent } from './components/cart/cart.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductListComponent } from './pages/client/product-list/product-list.component';
+import { ProductDetailComponent } from './pages/client/product-detail/product-detail.component';
+import { CategoryComponent } from './pages/client/category/category.component';
+import { CateDetailComponent } from './pages/client/cate-detail/cate-detail.component';
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component'
 
 
 @NgModule({
@@ -51,7 +59,15 @@ import { SignupComponent } from './pages/auth/signup/signup.component'
     AdminPrdDetailComponent,
     AdminPrdFormComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProductListComponent,
+    ProductDetailComponent,
+    CategoryComponent,
+    CateDetailComponent,
+    AdminUserListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<header>
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="col-span-2">
+      <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png" alt=""  width="120px"/>
+    </div>
+    <ul class="d-flex justify-content-between align-items-center m-0">
+      <li class="p-4"><a routerLink="">HOME</a></li>
+      <li class="p-4"><a routerLink="/products">PRODUCTS</a></li>
+      <li class="p-4"><a routerLink="">CART</a></li>
+      <li class="p-4"><a routerLink="/auth/login">LOGIN</a></li>
+      <button (click)="logout()">
+        <li class="p-4">LOGOUT</li>
+      </button>
+    </ul>
+    <div class="search">
+      <label for="check_search" class="fas fa-search"></label>
+    </div>
+    <input hidden type="checkbox" id="check_search" class="check_search" />
+    <label for="check_search" class="overlay"> </label>
+    <div class="search_focus">
+      <p class="p-3 d-flex justify-content-between align-items-center">
+        <input type="search" class="w-70 ps-4 form-search" placeholder="Search..." />
+        <i class="fas fa-search"></i>
+      </p>
+    </div>
+    <div class="sn">
+      <i class="p-1 fab fa-facebook"></i>
+      <i class="p-1 fab fa-instagram"></i>
+      <i class="p-1 fab fa-linkedin-in"></i>
+      <i class="p-1 fab fa-twitter-square"></i>
+    </div>
+  </div>
+</header>
